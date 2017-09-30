@@ -4,11 +4,13 @@
   "description": "this is a project with a simple structure for start another  projects",
   "main": "src",
   "scripts": {
+    "linter": "eslint src",
+    "prestart": "npm run build",
     "start-babel": "babel-node src",
-    "start-babel-watch": "nodemon --exec 'npm run linter && npm run start-babel'",
+    "prestart-babel-watch":"npm run linter",
+    "start-babel-watch": "nodemon --exec npm run start-babel",
     "build": "babel src -d dist --source-maps",
     "start": "node dist",
-    "linter": "eslint src",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "Iago Laguna",
@@ -16,8 +18,10 @@
   "devDependencies": {
     "babel-cli": "^6.26.0",
     "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.1",
     "babel-preset-env": "^1.6.0",
     "babel-register": "^6.26.0",
+    "eslint": "^4.8.0",
     "nodemon": "^1.12.1"
   },
   "dependencies": {

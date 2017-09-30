@@ -2,7 +2,7 @@ import express from 'express';
 import cors from 'cors';
 import bodyParser from 'body-parser';
 import HttpStatus from 'http-status';
-// import Router from './routes';
+import Router from './routes';
 
 const app = express();
 
@@ -13,9 +13,9 @@ app.use(bodyParser.urlencoded({
 	extended: true
 }));
 
-// app.use('/api', cors({
-// 	origin: false
-// }), Router);
+app.use('/api', cors({
+	origin: false
+}), Router);
 
 app.set('port', process.env.port || process.env.PORT || 80);
 
