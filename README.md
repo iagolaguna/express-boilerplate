@@ -1,6 +1,6 @@
 # Express Boilerplate 
 Hello new padawan's and old Jedi's this is a simple boilerplate for init a project with:
-+ Eslint Configurated
++ Eslint Configured
 + EditorConfig
 + Basic .gitignore
 + Last feature of babel
